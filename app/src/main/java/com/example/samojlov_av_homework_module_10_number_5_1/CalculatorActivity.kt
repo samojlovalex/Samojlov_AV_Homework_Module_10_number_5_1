@@ -27,7 +27,7 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var minusBTN: Button
     private lateinit var multiplicationBTN: Button
     private lateinit var divisionBTN: Button
-    private val calculator = Calculator(numberFirstET.toString(), numberSecondET.toString())
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -104,6 +104,8 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
         if (numberFirstET.text.isEmpty() || numberSecondET.text.isEmpty()) {
             return
         }
+
+        val calculator = Calculator(numberFirstET.text.toString(), numberSecondET.text.toString())
 
         val result = when (v?.id) {
             R.id.plusBTN -> calculator.plus.toString()
