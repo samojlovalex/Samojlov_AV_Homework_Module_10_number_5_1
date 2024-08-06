@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Samojlov_AV_Homework_Module_10_number_5_1</string>
+    <string name="reset">Reset</string>
+    <string name="exit">Exit</string>
+    <string name="toast_reset">Данные очищены</string>
+    <string name="toast_exit">Приложение закрыто</string>
+    <string name="toolbar_title">Скрытый калькулятор</string>
+    <string name="toolbar_subtitle">Mod. 10 № 5</string>
+    <string name="calculatorLaunchBT">Калькулятор</string>
+    <string name="numberET">Введите\nчисло</string>
+    <string name="plusBT">+</string>
+    <string name="minusBT">-</string>
+    <string name="multiplicationBT">*</string>
+    <string name="divisionBT">/</string>
+    <string name="resultTVHint">Результат</string>
+    <string name="toast_exit_calculator">Возврат в основной интерфейс</string>
+</resources>

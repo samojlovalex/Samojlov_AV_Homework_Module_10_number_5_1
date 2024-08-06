@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
+
+    <LinearLayout
+        android:id="@+id/calculatorToolbarContainerLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarCalculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Blue"
+            app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:subtitleTextColor="@color/white"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:titleTextColor="@color/white"
+            tools:ignore="MissingConstraints"></androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/calculatorContainerEditTextLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/padding"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculatorToolbarContainerLL"
+        app:layout_constraintVertical_bias="0.20">
+
+        <EditText
+            android:id="@+id/numberFirstET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/numberET"
+            android:textColor="@color/Blue"
+            android:textSize="@dimen/textSiZeET"
+            tools:ignore="TouchTargetSizeCheck"></EditText>
+
+        <EditText
+            android:id="@+id/numberSecondET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/numberET"
+            android:textColor="@color/Blue"
+            android:textSize="@dimen/textSiZeET"
+            tools:ignore="TouchTargetSizeCheck"></EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/calculatorContainerButtonLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculatorContainerEditTextLL"
+        app:layout_constraintVertical_bias="0.20">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/plusBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/plusBT"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSiZeBT"
+                android:backgroundTint="@color/Blue">
+            </Button>
+
+            <Button
+                android:id="@+id/minusBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/minusBT"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSiZeBT"
+                android:backgroundTint="@color/Blue">
+            </Button>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/multiplicationBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/multiplicationBT"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSiZeBT"
+                android:backgroundTint="@color/Blue">
+            </Button>
+
+            <Button
+                android:id="@+id/divisionBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/divisionBT"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSiZeBT"
+                android:backgroundTint="@color/Blue">
+            </Button>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
